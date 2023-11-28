@@ -1,0 +1,16 @@
+.header {
+  padding: 24px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+}

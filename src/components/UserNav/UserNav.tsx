@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "./UserNav.scss";
 import {
   DIARY_ROUTE,
   EXERCISES_ROUTE,
@@ -7,11 +8,17 @@ import {
 
 const UserNav = () => {
   return (
-    <>
-      <NavLink to={DIARY_ROUTE}> Diary</NavLink>
-      <NavLink to={PRODUCTS_ROUTE}> Products</NavLink>
-      <NavLink to={EXERCISES_ROUTE}> Exercises</NavLink>
-    </>
+    <nav className="nav">
+      <NavLink to={DIARY_ROUTE} className="nav-link">
+        Diary
+      </NavLink>
+      <NavLink to={PRODUCTS_ROUTE} className="nav-link">
+        Products
+      </NavLink>
+      <NavLink to={EXERCISES_ROUTE} className="nav-link">
+        Exercises
+      </NavLink>
+    </nav>
   );
 };
 

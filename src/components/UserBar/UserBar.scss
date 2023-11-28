@@ -1,0 +1,22 @@
+.icon-settings {
+  stroke: gray;
+  width: 24px;
+  height: 24px;
+
+  @media screen and (min-width: 768px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.user-avatar {
+  width: 37px;
+  height: 37px;
+  fill: rgba(48, 48, 48, 0.3);
+  border: 1px solid #e6533c;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

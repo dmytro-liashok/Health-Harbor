@@ -1,0 +1,27 @@
+.nav {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: flex;
+    gap: 16px;
+    margin-right: 16px;
+  }
+}
+
+.nav-link {
+  border: 1px solid rgba(239, 237, 232, 0.2);
+  border-radius: 12px;
+
+  padding: 10px 27px;
+
+  color: #efede8;
+  font-size: 16px;
+  line-height: 1.5;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    outline: none;
+    background-color: #e6533c;
+  }
+}
