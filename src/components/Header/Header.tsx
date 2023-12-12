@@ -1,17 +1,25 @@
 import Logo from "../Logo/Logo";
 import UserBar from "../UserBar/UserBar";
-import UserBurger from "../UserBurger/UserBurger";
+import BurgerMenu from "../burgerMenu/burgerMenu";
 import UserNav from "../UserNav/UserNav";
-import "./Header.scss";
+import scss from "./Header.module.scss";
+import LogoutBtn from "../LogoutBtn/LogoutBtn";
 
 const Header = () => {
   return (
-    <header className="header">
-      <Logo />
-      <div className="user-menu">
-        <UserNav />
-        <UserBar />
-        <UserBurger />
+    <header className={scss.header}>
+      <Logo className=""/>
+      <div className={scss.headerNavWrap}>
+        <nav className={scss.nav}>
+          <UserNav />
+        </nav>
+        <div className={scss.userMenu}>
+          <UserBar />
+          <BurgerMenu />
+          <div className={scss.logoutBtnWrap}>
+            <LogoutBtn />
+          </div>
+        </div>
       </div>
     </header>
   );

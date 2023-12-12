@@ -1,24 +1,34 @@
 import { NavLink } from "react-router-dom";
-import "./UserNav.scss";
+import scss from "./UserNav.module.scss";
 import {
   DIARY_ROUTE,
   EXERCISES_ROUTE,
   PRODUCTS_ROUTE,
+  SIGNIN_ROUTE,
+  SIGNUP_ROUTE,
 } from "../../utils/constantes";
 
 const UserNav = () => {
   return (
-    <nav className="nav">
-      <NavLink to={DIARY_ROUTE} className="nav-link">
-        Diary
-      </NavLink>
-      <NavLink to={PRODUCTS_ROUTE} className="nav-link">
-        Products
-      </NavLink>
-      <NavLink to={EXERCISES_ROUTE} className="nav-link">
-        Exercises
-      </NavLink>
-    </nav>
+    <>
+      <div className={scss.navLinkWrap}>
+        <NavLink to={DIARY_ROUTE} className={scss.navLink}>
+          Diary
+        </NavLink>
+        <NavLink to={PRODUCTS_ROUTE} className={scss.navLink}>
+          Products
+        </NavLink>
+        <NavLink to={EXERCISES_ROUTE} className={scss.navLink}>
+          Exercises
+        </NavLink>
+        <NavLink to={SIGNIN_ROUTE} className={scss.navLink}>
+          singin
+        </NavLink>
+        <NavLink to={SIGNUP_ROUTE} className={scss.navLink}>
+          singup
+        </NavLink>
+      </div>
+    </>
   );
 };
 

@@ -9,3 +9,17 @@ export interface IconProps {
 export interface ContainerProps {
   children: ReactNode;
 }
+
+export interface ModalProps {
+  children: ReactNode;
+  handleModalToggle: () => void;
+}
+
+export interface ModalMobileNavProps {
+  handleModalToggle: () => void;
+  isModalOpen: boolean;
+}
+
+export interface iconLogoProps {
+  className?: string;
+}

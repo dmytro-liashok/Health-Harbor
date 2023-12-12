@@ -10,8 +10,8 @@ import {
   EXERCISES_ROUTE,
   PRODUCTS_ROUTE,
   PROFILE_ROUTE,
-  SIGNIN,
-  SIGNUP,
+  SIGNIN_ROUTE,
+  SIGNUP_ROUTE,
   WELCOME_ROUTE,
 } from "../utils/constantes";
 
@@ -21,11 +21,11 @@ const routes = [
     element: <Welcome />,
   },
   {
-    path: SIGNUP,
+    path: SIGNUP_ROUTE,
     element: <Signup />,
   },
   {
-    path: SIGNIN,
+    path: SIGNIN_ROUTE,
     element: <Signin />,
   },
   {

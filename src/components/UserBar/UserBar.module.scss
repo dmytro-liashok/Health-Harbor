@@ -1,15 +1,17 @@
-.icon-settings {
+@import "../../sass//styles.scss";
+
+.iconUserBar {
   stroke: gray;
   width: 24px;
   height: 24px;
 
-  @media screen and (min-width: 768px) {
+  @include tabletScreen {
     width: 28px;
     height: 28px;
   }
 }
 
-.user-avatar {
+.userAvatar {
   width: 37px;
   height: 37px;
   fill: rgba(48, 48, 48, 0.3);
