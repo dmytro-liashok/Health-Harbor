@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Health-Harbor/static/css/main.e0c4c1e7.css",
+    "main.js": "/Health-Harbor/static/js/main.b8d4cd8e.js",
+    "static/media/girlCrouchesDownBackground-tablet.jpg": "/Health-Harbor/static/media/girlCrouchesDownBackground-tablet.7926fcd9d278b6604757.jpg",
+    "static/media/svg-sprite.svg": "/Health-Harbor/static/media/svg-sprite.cdfe151f3501c9395826b4df4e89f711.svg",
+    "index.html": "/Health-Harbor/index.html",
+    "main.e0c4c1e7.css.map": "/Health-Harbor/static/css/main.e0c4c1e7.css.map",
+    "main.b8d4cd8e.js.map": "/Health-Harbor/static/js/main.b8d4cd8e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0c4c1e7.css",
+    "static/js/main.b8d4cd8e.js"
+  ]
+}
