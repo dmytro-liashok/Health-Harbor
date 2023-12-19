@@ -1,0 +1,15 @@
+@import "../../sass/styles.scss";
+
+.iconBurgerMenu {
+  width: 24px;
+  height: 24px;
+
+  @include tabletScreen {
+    width: 32px;
+    height: 32px;
+  }
+
+  @include desktopScreen {
+    display: none;
+  }
+}

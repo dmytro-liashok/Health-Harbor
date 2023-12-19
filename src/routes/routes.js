@@ -10,40 +10,71 @@ import {
   EXERCISES_ROUTE,
   PRODUCTS_ROUTE,
   PROFILE_ROUTE,
-  SIGNIN,
-  SIGNUP,
+  SIGNIN_ROUTE,
+  SIGNUP_ROUTE,
   WELCOME_ROUTE,
 } from "../utils/constantes";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import RestrictedRoute from "./RestrictedRoute/RestrictedRoute";
 
-const routes = [
-  {
-    path: WELCOME_ROUTE,
-    element: <Welcome />,
-  },
-  {
-    path: SIGNUP,
-    element: <Signup />,
-  },
-  {
-    path: SIGNIN,
-    element: <Signin />,
-  },
+export const routesPrivate = [
   {
     path: PROFILE_ROUTE,
-    element: <Profile />,
+    element: (
+      <PrivateRoute>
+        <Profile />
+      </PrivateRoute>
+    ),
   },
   {
     path: DIARY_ROUTE,
-    element: <Diary />,
+    element: (
+      <PrivateRoute>
+        <Diary />
+      </PrivateRoute>
+    ),
   },
   {
     path: PRODUCTS_ROUTE,
-    element: <Products />,
+    element: (
+      <PrivateRoute>
+        <Products />
+      </PrivateRoute>
+    ),
   },
   {
     path: EXERCISES_ROUTE,
-    element: <Exercises />,
+    element: (
+      <PrivateRoute>
+        <Exercises />,
+      </PrivateRoute>
+    ),
   },
 ];
 
-export default routes;
+export const routesRestrict = [
+  {
+    path: WELCOME_ROUTE,
+    element: (
+      <RestrictedRoute>
+        <Welcome />
+      </RestrictedRoute>
+    ),
+  },
+  {
+    path: SIGNUP_ROUTE,
+    element: (
+      <RestrictedRoute>
+        <Signup />
+      </RestrictedRoute>
+    ),
+  },
+  {
+    path: SIGNIN_ROUTE,
+    element: (
+      <RestrictedRoute>
+        <Signin />
+      </RestrictedRoute>
+    ),
+  },
+];

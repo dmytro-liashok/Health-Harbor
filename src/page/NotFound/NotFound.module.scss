@@ -1,0 +1,112 @@
+@import "../../sass/styles.scss";
+
+.infoWrapperNotFound {
+  height: 100vh;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.infoNotFound {
+  height: 100%;
+  max-width: 240px;
+  background-color: $orange;
+  padding: 24px 20px;
+
+  @include tabletScreen {
+    max-width: 420px;
+    padding: 32px;
+  }
+
+  @include desktopScreen {
+    max-width: 669px;
+    padding: 32px 96px;
+    margin-right: 100px;
+  }
+}
+
+.infoDescriptionNotFound {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.logoNotFound {
+  fill: $white;
+}
+
+.titleNotFound {
+  @include font($fs: 66px, $fw: 500, $lh: 1);
+
+  letter-spacing: 0.66px;
+  margin-bottom: 14px;
+
+  @include tabletScreen {
+    @include font($fs: 160px, $fw: null, $lh: 0.93);
+
+    letter-spacing: 1.6px;
+    margin-bottom: 28px;
+  }
+}
+
+.textNotFound {
+  @include fontMobile;
+
+  margin-bottom: 28px;
+
+  @include tabletScreen {
+    @include fontTableAndDesktop;
+  }
+}
+
+.linkNotFound {
+  @include font($fs: 16px, $fw: 500, $lh: 1.12);
+
+  display: inline-block;
+  padding: 12px 40px;
+
+  border-radius: $border-radius;
+  border: $border-input;
+
+  @include hover {
+    border: $border-hover-mobile;
+  }
+
+  @include tabletScreen {
+    @include font($fs: 20px, $fw: null, $lh: 1.2);
+
+    padding: 16px 60px;
+  }
+}
+
+.imgNotFound {
+  background-image: url(../../img/backgrounds/girlCrouchesDownBackground-mob.jpg);
+  background-color: $background-linear-gradient-mob;
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  min-width: 135px;
+  height: 505px;
+
+  @include tabletScreen {
+    background-image: url(../../img/backgrounds/girlCrouchesDownBackground-tablet.jpg);
+
+    min-width: 348px;
+    height: 912px;
+    background-position: 20% 100px;
+  }
+
+  @include desktopScreen {
+    min-width: 670px;
+    height: 100%;
+    background-position: 100% 75%;
+  }
+
+  @media screen and (min-height: 1150px) {
+    background-position: 20%;
+  }
+}

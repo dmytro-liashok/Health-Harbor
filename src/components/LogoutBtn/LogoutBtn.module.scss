@@ -1,0 +1,41 @@
+@import "../../sass/styles.scss";
+
+.logOutLink {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: $transition;
+  margin-right: auto;
+
+  @include hover {
+    transform: scale(1.3);
+    cursor: pointer;
+  }
+
+  @include desktopScreen {
+    @include hover {
+      transform: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.logoutText {
+  color: $white;
+
+  @include fontMobile;
+
+  @include tabletScreen {
+    @include fontTableAndDesktop;
+  }
+}
+
+.iconLogout {
+  width: 20px;
+  height: 20px;
+  stroke: $white;
+
+  @include desktopScreen {
+    stroke: $orange;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../sass/styles.scss";
+
+.layoutPublic {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgLayoutPublic {
+  height: 100%;
+  width: 100%;
+  background-image: $background-linear-gradient-mob,
+    url(../../img/backgrounds/girlCrouchesDownBackground-tablet.jpg);
+  background-repeat: no-repeat;
+  background-size: 446px 669px;
+
+  position: absolute;
+  z-index: -2;
+  bottom: -30%;
+  right: -10%;
+
+  @include tabletScreen {
+    background-size: 670px 1005px;
+    bottom: -10%;
+    right: -35%;
+  }
+}
+
+.header {
+  padding-top: 24px;
+}

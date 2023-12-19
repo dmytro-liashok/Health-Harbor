@@ -1,0 +1,40 @@
+@import "../../sass/styles.scss";
+
+.navLinkWrap {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 120px;
+  justify-content: center;
+
+  @include desktopScreen {
+    width: auto;
+  }
+}
+
+.navLink {
+  border: $border-solid-color;
+  border-radius: $border-radius;
+  transition: $transition;
+  color: $white;
+
+  padding: 10px 27px;
+
+  @include fontMobile;
+
+  @include hover {
+    border: $border-hover-mobile;
+  }
+
+  @include tabletScreen {
+    @include fontTableAndDesktop;
+  }
+
+  @include desktopScreen {
+    @include hover {
+      border: $border-solid-color;
+      background-color: $orange;
+      outline: none;
+    }
+  }
+}

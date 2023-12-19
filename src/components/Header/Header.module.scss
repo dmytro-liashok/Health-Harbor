@@ -1,0 +1,46 @@
+@import "../../sass/styles.scss";
+
+.header {
+  padding: 12px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: $border-section-header;
+
+  @include tabletScreen {
+    padding: 20px 0px;
+  }
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  @include tabletScreen {
+    gap: 16px;
+  }
+}
+
+.nav {
+  display: none;
+
+  @include desktopScreen {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.headerNavWrap {
+  display: flex;
+  gap: 32px;
+}
+
+.logoutBtnWrap {
+  display: none;
+  
+  @include desktopScreen {
+    display: block;
+  }
+}

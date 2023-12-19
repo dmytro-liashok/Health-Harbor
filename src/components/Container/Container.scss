@@ -1,0 +1,19 @@
+@import "../../sass/styles.scss";
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  min-width: 335px;
+
+  @include mobileScreen {
+    width: 365px;
+  }
+
+  @include tabletScreen {
+    width: 734px;
+  }
+
+  @include desktopScreen {
+    width: 1278px;
+  }
+}

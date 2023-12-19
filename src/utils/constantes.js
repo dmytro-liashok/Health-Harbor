@@ -1,8 +1,8 @@
 //Routes
 
 export const WELCOME_ROUTE = "/welcome";
-export const SIGNUP = "/signup";
-export const SIGNIN = "/signin";
+export const SIGNUP_ROUTE = "/signup";
+export const SIGNIN_ROUTE = "/signin";
 export const PROFILE_ROUTE = "/profile";
 export const DIARY_ROUTE = "/diary";
 export const PRODUCTS_ROUTE = "/products";
