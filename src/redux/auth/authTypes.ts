@@ -1,9 +1,9 @@
-import { token } from "./../services/tokenAPI";
 export interface AuthState {
   user: User;
   isLoading: boolean;
   error: any;
   token: string;
+  authenticated: boolean;
 }
 
 export interface User {
@@ -12,19 +12,16 @@ export interface User {
   registrDate: string;
   avatarURL: string;
   verify: boolean;
+  profileSettings: string[];
 }
 
-export interface AuthSuccessPayload {
-  payload: User;
-}
-
-export interface paramsTypes {
+export interface paramsAuthSignUpTypes {
   name: string;
   email: string;
   password: string;
 }
 
-export interface paramsSignInTypes {
+export interface paramsAuthSignInTypes {
   email: string;
   password: string;
 }
@@ -39,9 +36,8 @@ export interface ActionRefreshTypes {
   token: string;
 }
 
-export interface AuthSuccessSignInPayload {
-  payload: {
-    user: User;
-    token: string;
-  };
+export interface ActionLogOutTypes {
+  user: User;
+  token: string;
 }
+

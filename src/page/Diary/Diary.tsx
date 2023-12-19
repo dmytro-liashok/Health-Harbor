@@ -1,7 +1,7 @@
 import React from "react";
 
 const Diary = () => {
-  return <div>Diary</div>;
+  return <div>Diarygvjhbjhbjbhj</div>;
 };
 
 export default Diary;

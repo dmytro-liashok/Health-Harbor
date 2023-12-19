@@ -13,7 +13,6 @@ const Signin = () => {
     },
 
     onSubmit: (values) => {
-      console.log(values);
       dispatch(authSignIn(values));
     },
   });

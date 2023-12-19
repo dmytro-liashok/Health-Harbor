@@ -1,41 +1,55 @@
+import { ActionReducerMapBuilder } from "@reduxjs/toolkit";
 import {
-  AuthState,
-  AuthSuccessPayload,
-  AuthSuccessSignInPayload,
-} from "../../types/authTypes";
+  authLogOut,
+  authRefresh,
+  authSignIn,
+  authSignUp,
+} from "./authOperation";
+import { AuthState } from "./authTypes";
 
-export const handlePending = (state: AuthState) => {
-  state.isLoading = true;
-  state.error = null;
+export const handleAuthSignUp = (
+  builder: ActionReducerMapBuilder<AuthState>
+) => {
+  builder.addCase(authSignUp.fulfilled, (state, action) => {
+    state.isLoading = false;
+    state.error = null;
+    state.user = action.payload;
+    state.authenticated = true;
+  });
 };
 
-export const handleRejected = (
-  state: AuthState,
-  action: { payload?: string }
+export const handleAuthSignIn = (
+  builder: ActionReducerMapBuilder<AuthState>
 ) => {
-  console.log(action);
-
-  state.isLoading = false;
-  state.error = action.payload;
+  builder.addCase(authSignIn.fulfilled, (state, action) => {
+    state.isLoading = false;
+    state.error = null;
+    state.user = action.payload.user;
+    state.token = action.payload.token;
+    state.authenticated = true;
+  });
 };
 
-export const handleFulfilledAuthSignUp = (
-  state: AuthState,
-  action: AuthSuccessPayload
+export const handleAuthCurrent = (
+  builder: ActionReducerMapBuilder<AuthState>
 ) => {
-  state.isLoading = false;
-  state.error = null;
-  state.user = action.payload;
-  state.user.verify = true;
+  builder.addCase(authRefresh.fulfilled, (state, action) => {
+    state.isLoading = false;
+    state.error = null;
+    state.user = action.payload.user;
+    state.token = action.payload.token;
+    state.authenticated = true;
+  });
 };
 
-export const handleFulfilledAuthSignIn = (
-  state: AuthState,
-  action: AuthSuccessSignInPayload
+export const handleAuthLogOut = (
+  builder: ActionReducerMapBuilder<AuthState>
 ) => {
-  state.isLoading = false;
-  state.error = null;
-  state.user = action.payload.user;
-  state.token = action.payload.token;
-  state.user.verify = true;
+  builder.addCase(authLogOut.fulfilled, (state, action) => {
+    state.isLoading = false;
+    state.error = null;
+    state.user = action.payload.user;
+    state.token = "";
+    state.authenticated = false;
+  });
 };

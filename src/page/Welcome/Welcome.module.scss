@@ -1,0 +1,81 @@
+@import "../../sass/styles.scss";
+
+.welcomeSection {
+  padding-top: 90px;
+
+  @include tabletScreen {
+    padding-top: 140px;
+  }
+}
+
+.title {
+  @include font($fs: 38px, $fw: 500, $lh: 1.05);
+  letter-spacing: 0.38px;
+  color: $white;
+
+  @include tabletScreen {
+    @include font($fs: 70px, $fw: null, $lh: 1.11);
+    letter-spacing: 0.7px;
+  }
+}
+
+.bodyTitle {
+  position: relative;
+}
+
+.iconLine {
+  width: 100px;
+  height: 35px;
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  z-index: -1;
+
+  @include tabletScreen {
+    width: 185px;
+    height: 68px;
+
+    top: 20px;
+  }
+}
+
+.navWrap {
+  margin-top: 40px;
+  display: flex;
+  gap: 14px;
+
+  @include tabletScreen {
+    margin-top: 64px;
+    gap: 20px;
+  }
+}
+
+.navLink {
+  @include font($fs: 16px, $fw: 500, $lh: 1.12);
+  color: $white;
+  padding: 12px 40px;
+  border-radius: $border-radius;
+  transition: $transition;
+
+   @include tabletScreen {
+    @include font($fs: 20px, $fw: null, $lh: 1.2);
+    padding: 16px 60px;
+  }
+}
+
+.signUpLink {
+  background-color: $orange;
+
+  @include hover {
+    background-color: $orange-1;
+  }
+}
+
+.signInLink {
+  background-color: inherit;
+  border: $border-input;
+
+  @include hover {
+    border: $border-accent;
+  }
+}

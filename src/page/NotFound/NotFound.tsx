@@ -5,7 +5,6 @@ import { DIARY_ROUTE } from "../../utils/constantes";
 
 const NotFound = () => {
   return (
-
       <div className={scss.infoWrapperNotFound}>
         <div className={scss.infoNotFound}>
           <Logo className={scss.logoNotFound} />

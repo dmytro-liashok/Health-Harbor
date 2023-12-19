@@ -4,8 +4,6 @@ import {
   DIARY_ROUTE,
   EXERCISES_ROUTE,
   PRODUCTS_ROUTE,
-  SIGNIN_ROUTE,
-  SIGNUP_ROUTE,
 } from "../../utils/constantes";
 
 const UserNav = () => {
@@ -20,12 +18,6 @@ const UserNav = () => {
         </NavLink>
         <NavLink to={EXERCISES_ROUTE} className={scss.navLink}>
           Exercises
-        </NavLink>
-        <NavLink to={SIGNIN_ROUTE} className={scss.navLink}>
-          singin
-        </NavLink>
-        <NavLink to={SIGNUP_ROUTE} className={scss.navLink}>
-          singup
         </NavLink>
       </div>
     </>

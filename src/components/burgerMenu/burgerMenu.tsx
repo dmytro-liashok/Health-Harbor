@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Icon from "../Icon/Icon";
-import scss from "./burgerMenu.module.scss";
+import scss from "./BurgerMenu.module.scss";
 import NavMenuMobile from "../ModalWindows/NavMenuMobile/NavMenuMobile";
 
-const UserBurger = () => {
+const BurgerMenu = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalToggle = () => {
@@ -25,4 +25,4 @@ const UserBurger = () => {
   );
 };
 
-export default UserBurger;
+export default BurgerMenu;
