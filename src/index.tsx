@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistedStore}>
-      <BrowserRouter basename="/power-pulse-ts">
+      <BrowserRouter basename="/Health-Harbor">
         <App />
       </BrowserRouter>
     </PersistGate>
