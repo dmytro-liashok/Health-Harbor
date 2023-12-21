@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import LayOutPrivate from "../page/LayoutPrivate/LayoutPrivate";
 import { routesPrivate, routesRestrict } from "../routes/routes";
 import NotFound from "../page/NotFound/NotFound";
@@ -8,6 +8,7 @@ import { authRefresh } from "../redux/auth/authOperation";
 import useAuthSelectors from "../redux/auth/authSelectors";
 import Welcome from "../page/Welcome/Welcome";
 import LayoutPublic from "../page/LayoutPublic/LayoutPublic";
+import RestrictedRoute from "../routes/RestrictedRoute/RestrictedRoute";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -29,11 +30,19 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LayoutPublic />}>
+        <Route
+          path="/"
+          element={
+            <RestrictedRoute>
+              <LayoutPublic />
+            </RestrictedRoute>
+          }
+        >
           <Route index element={<Welcome />} />
           {routesRestrict.map(({ path, element }) => (
             <Route key={path} path={path} element={element} />
           ))}
+          <Route path="*" element={<Outlet />} />
         </Route>
         <Route path="/" element={<LayOutPrivate />}>
           {routesPrivate.map(({ path, element }) => (

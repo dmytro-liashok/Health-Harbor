@@ -10,7 +10,7 @@ const Logo: React.FC<iconLogoProps> = ({ className }) => {
     <NavLink to={WELCOME_ROUTE}>
       <div className={scss.logoWpap}>
         <Icon idIcon="icon-Logo" className={`${scss.logoIcon} ${className}`} />
-        <p className={scss.logoTitle}>Power Pulse</p>
+        <p className={scss.logoTitle}>Health Harbor</p>
       </div>
     </NavLink>
   );

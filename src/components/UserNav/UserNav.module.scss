@@ -38,3 +38,13 @@
     }
   }
 }
+
+.activeLink {
+  border: $border-hover-mobile;
+
+  @include desktopScreen {
+    border: $border-solid-color;
+    background-color: $orange;
+    outline: none;
+  }
+}

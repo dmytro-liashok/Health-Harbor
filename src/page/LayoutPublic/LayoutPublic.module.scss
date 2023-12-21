@@ -1,31 +1,68 @@
 @import "../../sass/styles.scss";
 
-.layoutPublic {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+.header {
+  padding-top: 24px;
+}
+
+.outletWrap {
+  min-height: 812px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding-bottom: 80px;
+  padding-top: 90px;
+
+  @include tabletScreen {
+    min-height: 1024px;
+  }
+
+  @include desktopScreen {
+    height: 94vh;
+    min-height: auto;
+
+    margin-bottom: 0px;
+    padding-top: 140px;
+
+    flex-direction: row;
+  }
 }
 
 .imgLayoutPublic {
+  min-height: 100%;
   height: 100%;
   width: 100%;
   background-image: $background-linear-gradient-mob,
     url(../../img/backgrounds/girlCrouchesDownBackground-tablet.jpg);
   background-repeat: no-repeat;
   background-size: 446px 669px;
-
-  position: absolute;
-  z-index: -2;
-  bottom: -30%;
-  right: -10%;
+  background-position: 77px 241px;
 
   @include tabletScreen {
+    min-height: 100%;
     background-size: 670px 1005px;
-    bottom: -10%;
-    right: -35%;
+    background-position: 272px 158px;
+  }
+
+  @include desktopScreen {
+    background-image: $desk-background-linear-gradient,
+      url(../../img/backgrounds/girlCrouchesDownBackground-tablet.jpg);
+    background-position: 595px -150px;
+    min-height: auto;
   }
 }
 
-.header {
-  padding-top: 24px;
+.additionalBackgroundGradient {
+  background-image: $background-linear-auth-mb,
+    url(../../img/backgrounds/girlCrouchesDownBackground-tablet.jpg);
+
+  @include tabletScreen {
+    background-image: $background-linear-gradient-mob,
+      url(../../img/backgrounds/girlCrouchesDownBackground-tablet.jpg);
+  }
+  @include desktopScreen {
+    background-image: $desk-background-linear-gradient,
+      url(../../img/backgrounds/girlCrouchesDownBackground-tablet.jpg);
+  }
 }

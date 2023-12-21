@@ -6,7 +6,7 @@ import Icon from "../../components/Icon/Icon";
 
 const Welcome: React.FC = () => {
   return (
-    <div className={scss.welcomeSection}>
+    <section className={scss.welcomeSection}>
       <h1 className={scss.title}>
         Transforming your{" "}
         <span className={scss.bodyTitle}>
@@ -29,7 +29,7 @@ const Welcome: React.FC = () => {
           Sign In
         </NavLink>
       </div>
-    </div>
+    </section>
   );
 };
 

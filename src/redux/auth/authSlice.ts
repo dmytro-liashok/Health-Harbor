@@ -42,14 +42,18 @@ const authSlice = createSlice({
     handleAuthLogOut(builder);
     builder
       .addMatcher(
-        (action) => action.type.endsWith("/pending"),
+        (action) =>
+          action.type.endsWith("/pending") &&
+          action.type.includes("handleAuth"),
         (state) => {
           state.isLoading = true;
           state.error = null;
         }
       )
       .addMatcher(
-        (action) => action.type.endsWith("/rejected"),
+        (action) =>
+          action.type.endsWith("/rejected") &&
+          action.type.includes("handleAuth"),
         (state, action) => {
           state.isLoading = false;
           state.error = action.payload;

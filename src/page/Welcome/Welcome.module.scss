@@ -1,12 +1,12 @@
 @import "../../sass/styles.scss";
 
-.welcomeSection {
-  padding-top: 90px;
+// .welcomeSection {
+//   padding-top: 90px;
 
-  @include tabletScreen {
-    padding-top: 140px;
-  }
-}
+//   @include tabletScreen {
+//     padding-top: 140px;
+//   }
+// }
 
 .title {
   @include font($fs: 38px, $fw: 500, $lh: 1.05);
@@ -16,6 +16,10 @@
   @include tabletScreen {
     @include font($fs: 70px, $fw: null, $lh: 1.11);
     letter-spacing: 0.7px;
+  }
+
+   @include desktopScreen {
+    width: 600px;
   }
 }
 
@@ -35,7 +39,7 @@
     width: 185px;
     height: 68px;
 
-    top: 20px;
+    top: 8px;
   }
 }
 

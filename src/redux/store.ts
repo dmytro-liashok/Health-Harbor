@@ -9,10 +9,12 @@ import {
   persistStore,
 } from "redux-persist";
 import { persistedAuthReducer } from "./auth/authSlice";
+import { statisticsReducer } from "./statistics/statisticsSlice";
 
 export const store = configureStore({
   reducer: {
     auth: persistedAuthReducer,
+    statistics: statisticsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

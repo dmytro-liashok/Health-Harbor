@@ -1,0 +1,104 @@
+@import "../../sass/styles.scss";
+
+.statisticsInfo {
+}
+
+.statisticsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+
+  @include tabletScreen {
+    width: 410px;
+    margin-left: auto;
+    margin-right: 50px;
+
+    justify-content: center;
+  }
+
+  @include desktopScreen {
+    padding-top: 100px;
+  }
+}
+
+.statisticsItem {
+  order: 2;
+  padding: 18px 14px;
+  opacity: 0.8;
+
+  background-color: $card-info-color;
+  border-radius: $border-radius;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  @include tabletScreen {
+    padding: 20px 23px;
+  }
+}
+
+.statisticsItem:nth-child(2n) {
+  background-color: $orange-1;
+  order: 1;
+  .iconWrap {
+    background-color: $beige;
+  }
+}
+
+.iconWrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $orange-1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tabletScreen {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.statisticsIcon {
+  width: 12px;
+  height: 12px;
+
+  fill: $white;
+
+  @include tabletScreen {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.statisticsValueWrap {
+  width: 72px;
+
+  @include tabletScreen {
+    width: 95px;
+  }
+}
+
+.statisticsValue {
+  color: $white;
+
+  @include font($fs: 16px, $fw: 700, $lh: 1.12);
+
+  @include tabletScreen {
+    @include font($fs: 24px, $fw: null, $lh: 1);
+  }
+}
+
+.statisticsTitle {
+  color: $color-info-tex;
+
+  @include font($fs: 12px, $fw: 400, $lh: 1.33);
+
+  @include tabletScreen {
+    @include font($fs: 16px, $fw: null, $lh: 1.5);
+  }
+}

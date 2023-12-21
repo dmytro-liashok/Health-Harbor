@@ -4,7 +4,7 @@ import scss from "./UserBar.module.scss";
 import { NavLink } from "react-router-dom";
 import { PROFILE_ROUTE } from "../../utils/constantes";
 
-const UserBar = () => {
+const UserBar: React.FC = () => {
   return (
     <>
       <NavLink to={PROFILE_ROUTE}>

@@ -1,10 +1,11 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import scss from "./LogoutBtn.module.scss";
 import Icon from "../Icon/Icon";
 import { useAppDispatch } from "../../hooks/hooksRedux";
 import { authLogOut } from "../../redux/auth/authOperation";
 
-const LogoutBtn = () => {
+const LogoutBtn: React.FC = () => {
   const dispatch = useAppDispatch();
 
   const handleLogOut = () => {
